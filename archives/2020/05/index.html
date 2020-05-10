@@ -22,10 +22,17 @@
     <link rel="icon" href="/favicon.png">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
+
+  <!--头像旋转-->
+  
+    <link rel="stylesheet" type="text/css" href="/./avatarrotation.css">
+  
+  <!--头像旋转-->
+
   <style type="text/css">
   
     #container.show {
-      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+      background: linear-gradient(200deg,#ccc,#000);
     }
   </style>
   
@@ -37,13 +44,46 @@
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
+
+
+    <div class="mymenucontainer" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+
+
+
     <div class="left-col" q-class="show:isShow">
-      
-<div class="overlay" style="background: #4d4d4d"></div>
+      <!--左边栏-->
+
+<div class="overlay">
+
+  <div id="tp-weather-widget"></div>
+  <script>
+    (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+    window.SeniverseWeatherWidget('show', {
+      flavor: "bubble",
+      location: "WX4FBXXFKE4F",
+      geolocation: true,
+      language: "zh-Hans",
+      unit: "c",
+      theme: "dark",
+      token: "28eb6c4b-be73-4f31-864c-d0700615ff82",
+      hover: "enabled",
+      container: "tp-weather-widget"
+    })
+  </script>
+
+</div>
+
+
+
+
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/img/top.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">John Doe</a></h1>
@@ -53,9 +93,13 @@
 		<nav class="header-menu">
 			<ul>
 			
+				<li><a href="/categories">签名</a></li>
+	        
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+				<li><a href="/archives">足迹</a></li>
+	        
+				<li><a href="/tags">留言墙</a></li>
 	        
 			</ul>
 		</nav>
@@ -77,17 +121,50 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="https://github.com/username" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+					<a class="gitee" target="_blank" href="https://gitee.com/username" title="gitee"><i class="icon-gitee"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="csdn" target="_blank" href="https://blog.csdn.net/username" title="csdn"><i class="icon-csdn"></i></a>
 		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="weibo" target="_blank" href="https://weibo.com" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="https://zhihu.com" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 			</div>
+
+      <!-- 《左侧边栏添加--APlayer音乐播放器：详见：https://aplayer.js.org/#/zh-Hans/ -->
+      
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+
+        <div id="aplayer" style="text-align:left"></div>
+        <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+
+        <!-- 为方便修改，添加一个配置文件，修改时直接修改配置文件即可。 -->
+        <script type="text/javascript" src="/js/APlayer_config.js"></script>
+
+        <!-- 根据封面自适应主题色，主要是作用于进度条 -->
+        <script type="text/javascript">
+          const colorThief = new ColorThief();
+          const setTheme = (index) => {
+            if (!ap.list.audios[index].theme) {
+              colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
+                ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+              });
+            }
+          };
+          setTheme(ap.list.index);
+          ap.on('listswitch', (data) => {
+            setTheme(data.index);
+          });
+        </script>
+      
+      <!-- 左侧边栏添加--APlayer音乐播放器》 -->
+
+
 		</nav>
-	</header>		
+	</header>
 </div>
 
     </div>
@@ -101,7 +178,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/img/top.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">John Doe</h1>
@@ -113,29 +190,39 @@
 			
 				
 			
+				
+			
+				
+			
 			
 			
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://github.com/username" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+						<a class="gitee" target="_blank" href="https://gitee.com/username" title="gitee"><i class="icon-gitee"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="csdn" target="_blank" href="https://blog.csdn.net/username" title="csdn"><i class="icon-csdn"></i></a>
 			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="weibo" target="_blank" href="https://weibo.com" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="https://zhihu.com" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
 				</div>
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/categories">签名</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
+		        
+					<li style="width: 25%"><a href="/archives">足迹</a></li>
+		        
+					<li style="width: 25%"><a href="/tags">留言墙</a></li>
 		        
 				</ul>
 			</nav>
@@ -232,11 +319,25 @@
     		&copy; 2020 John Doe
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Copyright</a> by Mas
       	</div>
     </div>
   </div>
+
+  
+    <!-- 不蒜子统计 -->
+    <span id="busuanzi_container_site_pv">
+                本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+                本站访客数<span id="busuanzi_value_site_uv"></span>人
+        </span>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
 </footer>
+
     </div>
     <script>
 	var yiliaConfig = {
@@ -465,5 +566,47 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
+
+  <!-- 《页面点击小红心 -->
+  
+    <script type="text/javascript" src="/js/love.js"></script>
+  
+  <!-- 页面点击小红心》 -->
+
+  <!-- 雪花特效3 -->
+  
+    <script type="text/javascript" src="/js/snow3.js"></script>
+  
+
+
 </body>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<!-- 《添加折叠按钮脚本 -->
+<script>
+  var hide = false;
+  function myFunction(x) {
+    console.log(x)
+    x.classList.toggle("change");
+    if(hide == false){
+      $(".left-col").css('display', 'none');
+      $(".mid-col").css("left", 6);
+      $(".tools-col").css('display', 'none');
+      $(".tools-col.hide").css('display', 'none');
+      hide = true;
+
+      $(".mymenucontainer").css('left', '0');
+
+    }else{
+      $(".left-col").css('display', '');
+      $(".mid-col").css("left", 300);
+      $(".tools-col").css('display', '');
+      $(".tools-col.hide").css('display', '');
+      hide = false;
+
+      $(".mymenucontainer").css('left', '260px');
+    }
+  }
+</script>
+<!-- 添加折叠按钮脚本》 -->
+
 </html>
