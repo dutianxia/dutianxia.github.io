@@ -1,3 +1,45 @@
+.search-friend {
+  color: #fffff8
+}
+
+.search-info {
+  color: #fffff8
+}
+
+.tools-col .tools-section .search-ul .search-info:hover {
+  color: #2EFDFF
+}
+
+.tools-col .tools-section .search-ul .search-friend:hover {
+  color: #43FF29
+}
+
+.icon-quo-info:before {
+  content: "\2618"
+}
+
+.icon-quo-friend:before {
+  content: "\2766"
+}
+
+.icon-quo-info {
+  margin-right: 10px;
+}
+
+.icon-quo-friend {
+  margin-right: 10px;
+}
+
+.tools-col .tools-section-me {
+  padding-top: 30px
+}
+
+.tools-col .tools-section .search-ul .search-title .icon-quo-left:hover {
+  color: #FFFF1E
+}
+
+
+
 .mymenucontainer {
   display:block;
   cursor:pointer;
@@ -742,7 +784,7 @@ i {
 }
 
 .icon-quo-left:before {
-  content: "\E7F5"
+  content: "\2600"
 }
 
 .icon-quo-right:before {
@@ -1988,7 +2030,7 @@ pre .css ~ * .id, pre .id {
   white-space: nowrap;
   text-overflow: ellipsis;
   display: block;
-  color: #fffff8;
+  color: #F7F7F9;
   text-shadow: 1px 1px rgba(77, 77, 77, .25)
 }
 
@@ -1998,7 +2040,15 @@ pre .css ~ * .id, pre .id {
 }
 
 .tools-col .tools-section .search-ul .search-title:hover {
-  color: #fff
+  color: #FF2215
+}
+
+.tools-col .tools-wrap .tools-section .search-ul .search-li .icon-calendar:hover {
+  color: #75570E
+}
+
+.tools-col .tools-wrap .tools-section .search-ul .search-li .search-tag .icon-price-tags:hover {
+  color: #E6BBC6
 }
 
 .tools-col .tools-section .search-ul .search-tag, .tools-col .tools-section .search-ul .search-time {
@@ -2016,7 +2066,7 @@ pre .css ~ * .id, pre .id {
 }
 
 .tools-col .tools-section .search-ul .search-tag span:hover, .tools-col .tools-section .search-ul .search-time span:hover {
-  color: #fff
+  color: #43200A
 }
 
 .tools-col .tools-section .search-ul .search-time {
