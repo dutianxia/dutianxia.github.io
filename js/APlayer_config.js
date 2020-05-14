@@ -171,7 +171,7 @@ const ap = new APlayer({
       artist: '半吨兄弟',
       lrc: '/music/lrc/最美的伤口 - 半吨兄弟',
       cover: 'http://img3.kuwo.cn/star/albumcover/300/69/15/479388728.jpg',
-      url: 'https://sharefs.yun.kugou.com/202005082303/05f11af823774b18ac0e6a1050d4a90e/G192/M06/0C/1F/YIcBAF5CpduAP7AiACucQG42EYM045.mp3'
+      url: 'http://zy2.chezai8.com:8801//%E9%85%B7%E6%88%91vip/DJ%E5%B0%8F%E9%B1%BC%E5%84%BF-%E6%9C%80%E7%BE%8E%E7%9A%84%E4%BC%A4%E5%8F%A3.mp3'
     },
     {
       name: '一个人挺好',
@@ -242,6 +242,27 @@ const ap = new APlayer({
       lrc: '/music/lrc/火苗 - 格格',
       cover: 'http://img1.kuwo.cn/star/albumcover/120/57/58/1597870129.jpg',
       url: 'http://mp3.9ku.com/m4a/179214.m4a'
+    },
+    {
+      name: '夜空中最亮的星',
+      artist: '逃跑计划',
+      lrc: '/music/lrc/夜空中最亮的星 - 逃跑计划',
+      cover: 'http://img3.kuwo.cn/star/albumcover/120/39/61/3660380159.jpg',
+      url: 'http://zy2.chezai8.com:8801//%E9%85%B7%E6%88%91vip/%E9%80%83%E8%B7%91%E8%AE%A1%E5%88%92-%E5%A4%9C%E7%A9%BA%E4%B8%AD%E6%9C%80%E4%BA%AE%E7%9A%84%E6%98%9F.mp3'
+    },
+    {
+      name: '旧梦一场',
+      artist: '阿悠悠',
+      lrc: '/music/lrc/旧梦一场 - 阿悠悠',
+      cover: 'http://img1.kuwo.cn/star/albumcover/120/71/46/3694962587.jpg',
+      url: 'http://zy2.chezai8.com:8801//kwVIP%E6%8E%92%E5%90%8D%E7%BD%91%E7%BA%A2/20200426/%E9%98%BF%E6%82%A0%E6%82%A0-%E6%97%A7%E6%A2%A6%E4%B8%80%E5%9C%BA.mp3'
+    },
+    {
+      name: '逞强',
+      artist: '杨小壮',
+      lrc: '/music/lrc/逞强 - 杨小壮',
+      cover: 'http://img1.kuwo.cn/star/albumcover/120/79/13/3035649544.jpg',
+      url: 'http://zy2.chezai8.com:8801//%E9%85%B7%E6%88%91vip/%E6%9D%A8%E5%B0%8F%E5%A3%AE-%E9%80%9E%E5%BC%BA.mp3'
     }
   ]
 });
