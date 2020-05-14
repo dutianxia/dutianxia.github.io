@@ -1,4 +1,4 @@
-////////////////////////////////////////////////////////////
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>////////////////////////////////////////////////////////////
 // ==== HTML5 CANVAS transform Image ====
 // full 3D version
 // @author Gerard Ferrandez / http://www.dhteumeuleu.com/
