@@ -1027,7 +1027,7 @@ body {
   position: absolute;
   right: 0;
   min-height: 100%;
-  background: url('/img/right.jpg') no-repeat 0% 0%/ cover;
+  background: url('http://images2.wodexiangce.cn/20200511/4773520/3982187/95171233.jpg') no-repeat 0% 0%/ cover;
   left: 300px;
   width: auto
 }
@@ -1043,7 +1043,7 @@ body {
 
 .left-col {
   /* background:#fff; */
-  background: url('/img/left.jpg') no-repeat 0% 20%/ cover;
+  background: url('http://images2.wodexiangce.cn/20200511/4773520/3982187/95171232.jpg') no-repeat 0% 20%/ cover;
   width:300px;
   position:fixed;
   opacity:1;
